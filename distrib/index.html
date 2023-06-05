@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast - mob&desc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="js/main.js" type="module"></script>
+</head>
+<body>
+        <main class="fade-in">
+            <h1 class="offscreen">Responsive Weather App with the OpenWeather API </h1>
+<!-------------------------- Поиск места -------------------------->
+            <section id="searchBar" class="searchBar fade-in">
+                <form id="searchBar__form" class="searchBar__form" role="search">
+                    <label for="searchBar_text" class="offscreen">Enter a new location</label>
+                    <input id="searchBar__text" class="searchBar__text" type="text" role="searchbox" autocomplete="off" placeholder="City, Region, Country">
+                    <button id="searchBar__button" class="searchBar__button button" title="Submit location" aria-label="Submit Search">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-sync fa-spin none"></i>
+                    </button>
+
+                </form>
+            </section>
+
+            <a href="#currentForecast" class="skip_link">Skip to current conditions</a>
+
+<!------------------------- Текущий прогноз  ---------------------->
+            <section id="currentForecast" class="currentForecast fade-in" role="region" aria-labelledby="currentForecast__location">
+                <h2 id="currentForecast__location" class="currentForecast__location">Current Conditions</h2>
+                
+                <div id="currentForecast__conditions" class="currentForecast__conditions">
+
+                    <!-- <div class="icon" id="icon"><i class="far fa-sun" aria-hidden="true" title="clear sky"></i></div>
+                    <div class="temp">18°<div class="unit">F</div></div>
+                    <div class="desc">Clear Sky</div>
+                    <div class="feels">Feels like 14°</div>
+                    <div class="maxtemp">High 24°</div>
+                    <div class="mintemp">Low 12°</div>
+                    <div class="humidity">Humidity 86%</div>
+                    <div class="wind">Wind 2 mph</div> -->
+                </div>
+
+            </section>
+
+            <a href="#dailyForecast" class="skip_link">Skip to six day Forecast</a>
+
+<!------------------------- Кнопки навигации ------------------------>
+            <nav id="navButtons" class="navButtons fade-in">
+                
+                <button id="getLocation" class="button" title="Get Location" aria-label="Get the current weather conditions for your current location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <i class="fas fa-sync fa-spin none"></i>
+                </button>
+                <button id="home" class="button" title="Home Location" aria-label="Get the current weather conditions for your home location">
+                    <i class="fas fa-home"></i>
+                    <i class="fas fa-sync fa-spin none"></i>
+                </button>
+                <button id="saveLocation" class="button" title="Save Location" aria-label="Save the current location as your home location">
+                    <i class="fas fa-save"></i>
+                    <i class="fas fa-sync fa-spin none"></i>
+                </button>
+                <button id="unit" class="button" title="Toggle Measurement Units" aria-label="Toggle between metric and imperial measurement units">
+                    <i class="fas fa-chart-bar"></i>
+                    <i class="fas fa-sync fa-spin none"></i>
+                </button>
+                <button id="refresh" class="button" title="Refresh Weather" aria-label="Refresh the current weather conditions">
+                    <i class="fas fa-sync-alt"></i>
+                    <i class="fas fa-sync fa-spin none"></i>
+                </button>
+            </nav>
+            <hr class="fade-in">
+
+<!------------------------- Прогноз на 6 дней ----------------------->
+            <section id="dailyForecast" class="dailyForecast fade-in" role="region" aria-labelledby="dailyForecast">
+                <h2 id="dailyForecast__title" class="dailyForecast__title offscreen">Six Day Forecast</h2>
+                <div id="dailyForecast__contents" class="dailyForecast__contents">
+
+                    <!-- <div class="forecastDay"><p class="dayAbbreviation">SUN</p><img src="https://openweathermap.org/img/wn/03d.png" alt="scattered clouds"><p class="dayHigh">19°</p><p class="dayLow">15°</p></div>
+
+                    <div class="forecastDay"><p class="dayAbbreviation">MON</p><img src="https://openweathermap.org/img/wn/03d.png" alt="scattered clouds"><p class="dayHigh">20°</p><p class="dayLow">16°</p></div>
+
+                    <div class="forecastDay"><p class="dayAbbreviation">TUE</p><img src="https://openweathermap.org/img/wn/04d.png" alt="overcast clouds"><p class="dayHigh">18°</p><p class="dayLow">13°</p></div>
+
+                    <div class="forecastDay"><p class="dayAbbreviation">WED</p><img src="https://openweathermap.org/img/wn/10d.png" alt="moderate rain"><p class="dayHigh">22°</p><p class="dayLow">15°</p></div>
+
+                    <div class="forecastDay"><p class="dayAbbreviation">THU</p><img src="https://openweathermap.org/img/wn/02d.png" alt="scattered clouds"><p class="dayHigh">21°</p><p class="dayLow">18°</p></div>
+
+                    <div class="forecastDay"><p class="dayAbbreviation">FRI</p><img src="https://openweathermap.org/img/wn/01d.png" alt="scattered clouds"><p class="dayHigh">24°</p><p class="dayLow">19°</p></div> -->
+
+                </div>
+
+            </section>
+
+            <p id="confirmation" class="offscreen" aria-live="assertive"></p>
+        </main>
+</body>
+</html>
